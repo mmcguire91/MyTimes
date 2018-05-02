@@ -1,0 +1,25 @@
+.header-container {
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  border-bottom: 1px solid black;
+  align-items: center;
+/*  position: fixed; */
+}
+
+.logo-item {
+  display: flex;
+  color: MediumAquaMarine;
+  padding-left: 30px;
+  align-items: center;
+}
+
+.logo-item span {
+  padding-left: 12px;
+}
+
+.nav-item ul {
+  display: inline-block;
+
+}
