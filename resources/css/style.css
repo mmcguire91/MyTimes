@@ -19,7 +19,7 @@
 .logo-item span {
   padding-left: 12px;
 }
-
+/* Attempting to align Nav to the right hand side*/
 .nav-item {
   padding-right: 40px;
   display: flex;
@@ -40,7 +40,6 @@
 
 .main-content {
   display: flex;
-/*  flex-direction: column;*/
   border: 1px solid black;
 /*  justify-content: space-around;*/
 }
@@ -84,6 +83,7 @@
 
 }*/
 
+/* Main Story Image - Issue displaying image full size */
 .main-content .column-large .Mother-three {
   border: 1px solid black;
   background-image: url("../images/mainstory.png");
@@ -93,16 +93,46 @@
   margin: 16px 0;
 }
 
+
+
 .main-content .column-large .Orca-Vaca {
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+/* Fall Image - Issue displaying image full size */
+.fall {
+  background-image: url("../images/fall.png");
+  display: flex;
+/*  flex-direction: column; */
+  width: 300px;
+  height: 300px;
+  margin-top: 15px;
 }
 
 .main-content .column-large .Orca-Vaca .earth-spins {
   border: 1px solid black;
 }
 
+
+
 .main-content .column-large .Burger4B {
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+/* Camera / Hipster Image - Issue displaying image full size */
+.camera-image {
+  background-image: url("../images/hipster.png");
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin-top: 15px;
 }
 
 .main-content .column-large .Burger4B .camera-memory {
@@ -113,6 +143,11 @@
   border: 1.5px solid black;
 }
 
+/* Cat Image - Issue displaying image full size */
+.Cat-in-control {
+  background-image: url("../images/catceo.png");
+}
+
 .main-content .column-medium .fbi-finds .cats {
   border: 1px solid black;
 }
@@ -120,3 +155,28 @@
 .main-content .column-small .news-bites {
   border: 1px solid black;
 }
+/*Story Headlines */
+.story-headline {
+  font-family: Georgia;
+  font-size: 17px;
+  color: black;
+}
+/* Image Text overlay */
+.image-headline {
+  font-family: Georgia;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+
+.image-text {
+  font-family: Georgia;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+/* Need to address:
+alignment of Nav items to right side of top header
+sizing of pictures to full default size
+alignment of substories in large colu
+  */
