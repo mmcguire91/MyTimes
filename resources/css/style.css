@@ -1,9 +1,12 @@
+/* Need to address:
+Footer
+  */
 .header-container {
   font-family: Verdana;
   font-size: 14px;
   font-weight: bold;
   display: flex;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black; -- Border of flexbox
   align-items: center;
 /*  position: fixed;*/
 }
@@ -13,7 +16,8 @@
   color: MediumAquaMarine;
   padding-left: 30px;
   align-items: center;
-  border: 1px solid black;
+/*  border: 1px solid black; Border of flexbox*/
+  flex-grow: 1;
 }
 
 .logo-item span {
@@ -23,15 +27,12 @@
 .nav-item {
   padding-right: 40px;
   display: flex;
-  /*justify-content: flex-end;*/
-  /*float: right;*/
-/*  align-self: flex-end;*/
+
 }
 
 .nav-item span {
   display: inline-block;
   padding: 20px 10px;
-/*  justify-content: flex-end;*/
   }
 
   .nav-item span a {
@@ -40,35 +41,28 @@
 
 .main-content {
   display: flex;
-  border: 1px solid black;
-/*  justify-content: space-around;*/
+/*  border: 1px solid black; Border of flexbox */
+padding-bottom: 78px;
 }
-
-/*.Column {
-  display: flex;
-  flex-direction: column;
-  margin-right: 32px;
-}*/
 
 .column-large {
   width: 630px;
-  border: 1px solid black;
+/*  border: 1px solid black; -- Border of flexbox */
   margin: 16px 0;
   margin-right: 32px;
 }
 
 .column-medium {
   width: 300px;
-  border: 1px solid black;
+/*  border: 1px solid black; -- Border of flexbox*/
   display: flex;
   flex-direction: column;
   margin-right: 32px;
-/*  align-items: center;*/
 }
 
 .column-small {
   width: 240px;
-  border: 1px solid black;
+/*  border: 1px solid black; -- Border of flexbox*/
   display: flex;
   flex-direction: column;
   margin-right: 32px;
@@ -83,10 +77,12 @@
 
 }*/
 
-/* Main Story Image - Issue displaying image full size */
+
 .main-content .column-large .Mother-three {
-  border: 1px solid black;
+/*  border: 1px solid black; -- Border of flexbox */
   background-image: url("../images/mainstory.png");
+  height: 300px;
+  width: 630px;
 }
 
 .main-content .column-large .monument {
@@ -96,36 +92,35 @@
 
 
 .main-content .column-large .Orca-Vaca {
-  border: 2px solid black;
+/*  border: 2px solid black; -- Border of flexbox*/
   display: flex;
   flex-direction: column;
   width: 300px;
 }
 
-/* Fall Image - Issue displaying image full size */
 .fall {
   background-image: url("../images/fall.png");
   display: flex;
-/*  flex-direction: column; */
   width: 300px;
   height: 300px;
   margin-top: 15px;
 }
 
-.main-content .column-large .Orca-Vaca .earth-spins {
+/*.main-content .column-large .Orca-Vaca .earth-spins {
   border: 1px solid black;
+} --Border of flexbox
+*/
+.earth-spins {
+  text-align: center;
 }
 
-
-
 .main-content .column-large .Burger4B {
-  border: 2px solid black;
+/*  border: 2px solid black;  -- Border of flexbox*/
   display: flex;
   flex-direction: column;
   width: 300px;
 }
 
-/* Camera / Hipster Image - Issue displaying image full size */
 .camera-image {
   background-image: url("../images/hipster.png");
   display: flex;
@@ -133,8 +128,10 @@
   width: 300px;
   height: 300px;
   margin-top: 15px;
+  text-align: center;
 }
 
+/* Border of flexbox
 .main-content .column-large .Burger4B .camera-memory {
   border: 1px solid black;
 }
@@ -142,12 +139,16 @@
 .main-content .column-medium .fbi-finds {
   border: 1.5px solid black;
 }
+*/
 
-/* Cat Image - Issue displaying image full size */
 .Cat-in-control {
   background-image: url("../images/catceo.png");
+  text-align: center;
+  height: 300px;
+  width: 300px;
 }
 
+/* Border of flexbox
 .main-content .column-medium .fbi-finds .cats {
   border: 1px solid black;
 }
@@ -155,12 +156,15 @@
 .main-content .column-small .news-bites {
   border: 1px solid black;
 }
+*/
+
 /*Story Headlines */
 .story-headline {
   font-family: Georgia;
   font-size: 17px;
   color: black;
 }
+
 /* Image Text overlay */
 .image-headline {
   font-family: Georgia;
@@ -176,8 +180,74 @@
   color: white;
   text-align: center;
 }
-/* Need to address:
-alignment of Nav items to right side of top header
-sizing of pictures to full default size
-alignment of substories in large colu
-  */
+
+ /* substories */
+ .column-large-bottom {
+   display: inline-flex;
+/* justify-content: space-between; -- This would not work here for some reason */
+ }
+
+.bcolumn-left {
+  margin-right: 25px;
+}
+
+/* News Bites */
+.bite-headline {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bite-items {
+background-color: WhiteSmoke;
+font-family: Verdana;
+font-size: 12px;
+color: DimGray;
+}
+
+.bite {
+  display: block;
+  padding: 11px 20px;
+  border-bottom: 1px solid black;
+}
+
+/*Footer*/
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 325px;
+  width: 100%;
+  background-color: MediumAquamarine;
+  margin: auto;
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+.info {
+  display: block;
+}
+
+.title {
+  display: inline-block;
+ font-family: Georgia;
+ font-size: 16px;
+ font-weight: bold;
+ color: white;
+ text-align: center;
+ padding-right: 25px;
+ border-right: 2px solid white;
+}
+
+.Footer nav {
+  display: inline-block;
+  padding-left: 25px;
+}
+
+.Footer nav a {
+  color: black;
+}
+
+.Footer .copyright {
+  display: block;
+}
